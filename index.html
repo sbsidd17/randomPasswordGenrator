@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Random Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <h4>Random Password Generator</h4>
+        <div class="display">
+          <input type="text" readonly id="showPassword" />
+          <button id="copyBtn" onclick="copyPassword()"><i class="ri-file-copy-line"></i>Copy</button>
+          <p id="copyMsg">Copied</p>
+        </div>
+        <div class="generator">
+          <input type="range" min="1" max="20" id="range" />
+          <p>Password Length : <span id="range-value">10</span></p>
+          <div class="checkbox">
+            <input type="checkbox" id="uppercase" checked />
+            <label for="upercase">Include Uppercase latters</label>
+            <br />
+            <input type="checkbox" id="lowercase" />
+            <label for="lowercase">Include Lowercase latters</label>
+            <br />
+            <input type="checkbox" id="number" />
+            <label for="number">Include Numbers</label>
+            <br />
+            <input type="checkbox" id="symbol" />
+            <label for="symbol">Include Symbols</label>
+            <br />
+          </div>
+          <div class="straingth"></div>
+          <button id="generate-btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
